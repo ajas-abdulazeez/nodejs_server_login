@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="form_submit.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="box">
+        <div class="tab">
+            <button class="tablink tablink_active"  name= "active" onclick="navigation(event, 'signin')" id="defaultOpen">Sign in</button> 
+            <button class="tablink"  onclick="navigation(event, 'signup')">Sign up</button>
+        </div>
+        <div id="signin" class="tabcontent">
+            <div class="form_elements">
+                <p>Hi there!  Welcome back</p><br>
+                <hr><br>
+                 
+                <input type="text" name="username" placeholder="username" class="inputbox">
+                <input type="password" name="password" placeholder="password" class="inputbox">
+                <div id="validity"></div>
+                <button id="button" onclick="post()" >Sign in</button>
+                <div id="time">loading</div>
+            </div>
+        </div>
+
+        <div id="signup" class="tabcontent">
+            <div class="form_elements">
+                <p>Please fill in this form to Create an account.</p><br>
+                <hr><br>
+                <input type="text" name="email" placeholder="Email id :" class="inputbox">
+                <input type="text" name="phone" placeholder="Phone no:" class="inputbox">
+                <input type="text" name="username" placeholder="Enter an username:" class="inputbox">
+                <input type="password" name="password" placeholder="Enter your password:" class="inputbox">
+                <div id="accountcreation_status"></div>
+                <button id="button" onclick="signup()">Sign in</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
